@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run build:*)",
+      "Bash(ren \"C:\\\\Users\\\\1ann0\\\\Downloads\\\\ian-mwangi---portfolio\" \"ian-monye-omondi---portfolio\")",
+      "Bash(powershell -Command:*)",
+      "mcp__filesystem__list_directory",
+      "mcp__filesystem__directory_tree",
+      "Bash(findstr:*)",
+      "Bash(dir:*)",
+      "mcp__Desktop_Commander__list_directory",
+      "Bash(copy \"C:\\\\Users\\\\1ann0\\\\OneDrive\\\\Desktop\\\\Ian Profile picture.jpg\" \"C:\\\\Users\\\\1ann0\\\\Downloads\\\\ian-monye-omondi---portfolio\\\\public\\\\profile.jpg\")",
+      "Bash(gh auth status:*)",
+      "mcp__Desktop_Commander__start_process",
+      "mcp__Desktop_Commander__read_process_output",
+      "mcp__filesystem__read_text_file",
+      "mcp__Desktop_Commander__write_file"
+    ]
+  }
+}

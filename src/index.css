@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-bg-deepest: #050507;
+  --color-bg-primary: #0a0a0f;
+  --color-bg-elevated: #111118;
+  --color-bg-hover: #1a1a24;
+
+  --color-blue-50: #eef4ff;
+  --color-blue-100: #d9e5ff;
+  --color-blue-200: #bcd2ff;
+  --color-blue-300: #8eb8ff;
+  --color-blue-400: #5b95ff;
+  --color-blue-500: #3b76ff;
+  --color-blue-600: #1d5af5;
+  --color-blue-700: #1548e0;
+
+  --color-text-primary: #f0f0f5;
+  --color-text-secondary: #8a8a9a;
+  --color-text-tertiary: #55556a;
+  --color-text-accent: #5b95ff;
+
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-border-hover: rgba(255, 255, 255, 0.12);
+  --color-border-active: rgba(59, 118, 255, 0.3);
+
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg-deepest text-text-primary font-sans antialiased selection:bg-blue-500/30 selection:text-blue-50;
+  }
+}
+
+/* Beam Button Animation */
+@keyframes beam-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.beam-spin {
+  animation: beam-spin 3s linear infinite;
+}
+
+/* Gradient Text Animation */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animated-gradient-text {
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease-in-out infinite;
+}
+
+/* Glow Utilities */
+.blue-glow {
+  box-shadow: 0 0 40px rgba(59, 118, 255, 0.15);
+}
+
+.blue-glow-strong {
+  box-shadow: 0 0 60px rgba(59, 118, 255, 0.25);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-deepest);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-elevated);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-bg-hover);
+}
+
+/* Markdown Styles for Blog */
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  @apply font-bold text-text-primary mt-8 mb-4 tracking-tight;
+}
+.markdown-body h1 { @apply text-3xl; }
+.markdown-body h2 { @apply text-2xl; }
+.markdown-body h3 { @apply text-xl; }
+.markdown-body p { @apply text-text-secondary leading-relaxed mb-4; }
+.markdown-body a { @apply text-text-accent hover:underline; }
+.markdown-body pre { @apply bg-bg-elevated p-4 rounded-xl overflow-x-auto border border-border-subtle mb-4; }
+.markdown-body code { @apply font-mono text-sm; }
