@@ -31,7 +31,7 @@ export function About() {
                   AI, fintech, and the businesses that power East Africa's economy.
                 </p>
                 <p>
-                  At Pague, a UK fintech startup, I built payment infrastructure that connected M-Pesa to global commerce — my first real lesson in how financial technology can close the gap between African mobile money and the rest of the world. That work sharpened my backend instincts and gave me a deep respect for the complexity behind every successful transaction.
+                  At Pague, a UK fintech startup, I interned on payment infrastructure connecting M-Pesa to global commerce — monitoring systems, learning the fintech stack, and getting a front-row seat to how financial technology actually operates under the hood. That exposure gave me a deep respect for the complexity behind every successful transaction and set the foundation for how I think about fintech today.
                 </p>
                 <p>
                   At the Ministry of Foreign and Diaspora Affairs in Kenya, I worked on enterprise IT at government scale — diagnosing network infrastructure and proposing automation systems for Kenya's diplomatic missions. High-stakes environments with zero margin for error. That taught me how to think before I build, and how to build systems that don't fail quietly.
