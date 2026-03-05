@@ -23,46 +23,49 @@ export function Navigation() {
   ];
 
   return (
-    <header
-      className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
-        isScrolled
-          ? 'bg-bg-deepest/80 backdrop-blur-md border-b border-border-subtle py-4'
-          : 'bg-transparent py-6'
-      )}
-    >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold tracking-tighter text-text-primary hover:text-blue-400 transition-colors">
-          ian.
-        </a>
+    <>
+      <header
+        className={cn(
+          'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
+          isScrolled
+            ? 'bg-bg-deepest/80 backdrop-blur-md border-b border-border-subtle py-4'
+            : 'bg-transparent py-6'
+        )}
+      >
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+          <a href="#" className="text-xl font-bold tracking-tighter text-text-primary hover:text-blue-400 transition-colors">
+            ian.
+          </a>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
-            >
-              {link.name}
-            </a>
-          ))}
-        </nav>
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden text-text-primary p-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+          {/* Mobile Menu Toggle */}
+          <button
+            className="md:hidden text-text-primary p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </header>
 
-      {/* Mobile Nav */}
+      {/* Mobile Nav — outside <header> to avoid backdrop-filter containing block issue */}
       <div
         className={cn(
           'fixed inset-0 bg-bg-deepest z-40 flex flex-col items-center justify-center space-y-8 transition-transform duration-300 ease-in-out md:hidden',
-          isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
+          isMobileMenuOpen ? 'translate-y-0 pointer-events-auto' : '-translate-y-full pointer-events-none'
         )}
       >
         {navLinks.map((link) => (
@@ -76,6 +79,6 @@ export function Navigation() {
           </a>
         ))}
       </div>
-    </header>
+    </>
   );
 }
