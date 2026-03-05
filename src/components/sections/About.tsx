@@ -23,7 +23,7 @@ export function About() {
 
               <div className="space-y-6 text-lg text-text-secondary leading-relaxed font-medium">
                 <p>
-                  I grew up between countries — Mozambique, Kenya, Ethiopia.
+                  I grew up between countries — Mozambique, Kenya, Ethiopia, Eswatini.
                   That taught me to adapt fast and build for different contexts.
                 </p>
                 <p>
