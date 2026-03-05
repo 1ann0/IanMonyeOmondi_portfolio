@@ -31,6 +31,12 @@ export function About() {
                   AI, fintech, and the businesses that power East Africa's economy.
                 </p>
                 <p>
+                  At Pague, a UK fintech startup, I built payment infrastructure that connected M-Pesa to global commerce — my first real lesson in how financial technology can close the gap between African mobile money and the rest of the world. That work sharpened my backend instincts and gave me a deep respect for the complexity behind every successful transaction.
+                </p>
+                <p>
+                  At the Ministry of Foreign and Diaspora Affairs in Kenya, I worked on enterprise IT at government scale — diagnosing network infrastructure and proposing automation systems for Kenya's diplomatic missions. High-stakes environments with zero margin for error. That taught me how to think before I build, and how to build systems that don't fail quietly.
+                </p>
+                <p>
                   When I'm not shipping code, I'm probably on a basketball court
                   working on my vertical — because the same mindset that pushes
                   you toward a dunk is the same one that ships products at midnight.
@@ -56,6 +62,14 @@ export function About() {
                 <div>
                   <p className="text-sm text-text-tertiary font-mono uppercase tracking-wider mb-2">Certifications</p>
                   <p className="font-semibold text-text-primary">Anthropic AI, Google Prompt Design</p>
+                </div>
+                <div>
+                  <p className="text-sm text-text-tertiary font-mono uppercase tracking-wider mb-2">Fintech</p>
+                  <p className="font-semibold text-text-primary">Pague, UK</p>
+                </div>
+                <div>
+                  <p className="text-sm text-text-tertiary font-mono uppercase tracking-wider mb-2">Gov't Tech</p>
+                  <p className="font-semibold text-text-primary">Kenya MFA</p>
                 </div>
               </StaggerReveal>
             </div>
